@@ -2,3 +2,18 @@
   display: flex;
   justify-content: center;
 }
+
+.justify-link {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+.p-position {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

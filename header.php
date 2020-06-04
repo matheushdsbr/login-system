@@ -18,7 +18,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Portfolio</a>
@@ -31,15 +31,16 @@
           </li>
         </ul>
       </div>
-      <form class="form-inline justify-form">
+      <form class="form-inline justify-form" action="includes/login.inc.php" method="post">
         <div class="my-2">
-          <input type="text" placeholder="Usuario/Email" class="mr-2">
-          <input type="text" placeholder="Password">
+          <input type="text" name="mailuid" placeholder="Usuario/Email" class="mr-2">
+          <input type="text" name="pwd" placeholder="Password">
+          <button class="btn btn-outline-success mx-sm-2" type="button" name="login-submit">Login</button>
         </div>
-        <div>
-          <button class="btn btn-outline-success mx-sm-2" type="button">Fazer Login</button>
-          <button class="btn btn-outline-success" type="button">Cadastre-se</button>
-        </div>
+      </form>
+      <a href="signup.php" class="justify-link">Signup</a>
+      <form action="form-inline justify-form" action="includes/login.inc.php" method="post">
+          <button class="btn btn-outline-success ml-sm-2" type="button">Logout</button>
       </form>
     </nav>
   </header>

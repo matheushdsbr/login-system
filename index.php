@@ -3,7 +3,10 @@
 ?>
 
 <main>
-  <h1>Hello World!</h1>
+  <div class="p-position my-2">
+    <p>You're logged out!</p>
+    <p>You're logged in!</p>
+  </div>
 </main>
 
 <?php
