@@ -36,9 +36,9 @@
       </div>
       <?php
         if (isset($_SESSION['userId'])) {
-          echo '<form action="form-inline justify-form" action="includes/logout.inc.php" method="post">
+          echo '<form class="form-inline justify-form my-2" action="includes/logout.inc.php" method="post">
           <button class="btn btn-outline-success ml-sm-2" type="submit" name="logout-submit">Logout</button>
-      </form></p>';
+      </form>';
         }
         else {
           echo '<form class="form-inline justify-form" action="includes/login.inc.php" method="post">

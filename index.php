@@ -9,7 +9,7 @@
         echo '<p class="text-success">You are logged in!</p>';
       }
       else {
-        echo '<p class="text-success">You are logged out!</p>';
+        echo '<p class="text-primary">You are logged out!</p>';
       }
     ?>
   </div>
