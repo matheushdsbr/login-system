@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +14,7 @@
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="header.php">Yo!</a>
+      <a class="navbar-brand" href="index.php">Yo!</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,16 +34,22 @@
           </li>
         </ul>
       </div>
-      <form class="form-inline justify-form" action="includes/login.inc.php" method="post">
-        <div class="my-2">
-          <input type="text" name="mailuid" placeholder="Usuario/Email" class="mr-2">
-          <input type="text" name="pwd" placeholder="Password">
-          <button class="btn btn-outline-success mx-sm-2" type="button" name="login-submit">Login</button>
-        </div>
-      </form>
-      <a href="signup.php" class="justify-link">Signup</a>
-      <form action="form-inline justify-form" action="includes/login.inc.php" method="post">
-          <button class="btn btn-outline-success ml-sm-2" type="button">Logout</button>
-      </form>
+      <?php
+        if (isset($_SESSION['userId'])) {
+          echo '<form action="form-inline justify-form" action="includes/logout.inc.php" method="post">
+          <button class="btn btn-outline-success ml-sm-2" type="submit" name="logout-submit">Logout</button>
+      </form></p>';
+        }
+        else {
+          echo '<form class="form-inline justify-form" action="includes/login.inc.php" method="post">
+          <div class="my-2">
+            <input type="text" name="mailuid" placeholder="Usuario/Email" class="mr-2">
+            <input type="password" name="pwd" placeholder="Password">
+            <button class="btn btn-outline-success mx-sm-2" type="submit" name="login-submit">Login</button>
+          </div>
+        </form>
+        <a href="signup.php" class="justify-link">Signup</a>';
+        }
+      ?>
     </nav>
   </header>
